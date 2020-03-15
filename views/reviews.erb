@@ -1,0 +1,5 @@
+<h1>Existing Reviews!</h1>
+
+<% for restaurant in @restaurants %>
+    <p><a href="/restaurants/<%= restaurant[:id] %>"><%= restaurant[:title] %></a></p>
+<% end %>

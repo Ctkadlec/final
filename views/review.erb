@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-9">
+        <h2>
+            <i class="fas fa-utensils"></i>
+            <%= @restaurant[:date] %>
+        </h2>
+        <h1><%= @restaurant[:title] %></h1>
+        <p><%= @restaurant[:description] %></p>
+        <% for review in @reviews %>
+            <div class="media">
+                <% if review[:checkin] %>
+                    <i class="far fa-check-square"></i>
+                <% else %>
+                    <i class="far fa-check-square"></i>
+                <% end %>
+                <div class="media-body">
+                    <h5 class="mt-0"><%= @users_table.where(id: review[:user_id]).to_a[0][:name] %></h5>
+                    <%= review[:comments] %>
+                </div>
+            </div>
+        <% end %>
+        <p class="mt-5">
+            <% if @current_user %>
+                <a href="/restaurants/<%= @restaurant[:id] %>/reviews/new" class="btn btn-primary">Review now!</a>
+            <% else %>
+                <a href="/logins/create" class="btn btn-danger">Please sign in to Review</a>
+            <% end %>
+        </p>
+    </div>
+    <div class="col-sm-3">
+        <h3>When?</h3>
+        <p><%= @restaurant[:enjoyedon] %></p>
+        <h3>Where?</h3>
+        <p><%= @restaurant[:location] %></p>
+        <h3>How many guests so far?</h3>
+        <p><%= @checkin_count %></p>
+    </div>
+</div>
