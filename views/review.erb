@@ -1,5 +1,6 @@
 <div class="row">
     <div class="col-sm-9">
+    <h1><%= @address %></h1>
         <h2>
             <i class="fas fa-utensils"></i>
             <%= @restaurant[:date] %>
@@ -28,11 +29,18 @@
         </p>
     </div>
     <div class="col-sm-3">
-        <h3>When?</h3>
+        <h3>When did I last eat there?</h3>
         <p><%= @restaurant[:enjoyedon] %></p>
-        <h3>Where?</h3>
+        <h3>Where is it located?</h3>
         <p><%= @restaurant[:location] %></p>
-        <h3>How many guests so far?</h3>
-        <p><%= @checkin_count %></p>
+        <h3>Check it out on a map!</h3>
+          <div class="container mt-5">
+            <iframe
+        width="400"
+        height="300"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtovsQvkIUWlNqtYwXY87gEd4ZSmJEhMw
+          &q=<%= @lat %>,<%= @long%>&zoom=15" allowfullscreen>
+      </iframe>
     </div>
 </div>

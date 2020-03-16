@@ -37,14 +37,14 @@ restaurants_table.insert(title: "Steamboat Barbecue",
                     location: "322 E Geneva Rd, Wheaton, IL")
 
 restaurants_table.insert(title: "Fire + Wine", 
-                    description: "Neopolitan pizza and Italian small plates!.",
+                    description: "Neopolitan pizza and Italian small plates!",
                     enjoyedon: "July 4",
                     location: "433 N Main St, Glen Ellyn, IL")
 restaurants_table.insert(title: "The Burger Social", 
-                    description: "Very messy burgers, great tap list, and nice ambiance!.",
-                    enjoyedon: "July 4",
+                    description: "Very messy burgers, great tap list, and nice ambiance!",
+                    enjoyedon: "August 14",
                     location: "108 N Hale St, Wheaton, IL")   
-restaurants_table.insert(title: "Alfie's Inn", 
-                    description: "Comfort food, dated interior, but great option for takeout!.",
-                    enjoyedon: "July 4",
-                    location: "425 Roosevelt Rd, Glen Ellyn, IL")   
+restaurants_table.insert(title: "Two Hound Red", 
+                    description: "Comfort food, industrial interior, great option for takeout, and they brew their own beer!",
+                    enjoyedon: "February 21",
+                    location: "486 Pennsylvania Ave, Glen Ellyn, IL 60137")   
